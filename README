@@ -2,7 +2,7 @@ This is modified version of OSGi Clipboard Monitor for Java.
 
 Original code available at: https://github.com/pke/clipboard.monitor.
 
-Oiginal article: http://philondev.blogspot.com/2010/02/osgi-clipboard-monitor-for-java-on.html
+Original article: http://philondev.blogspot.com/2010/02/osgi-clipboard-monitor-for-java-on.html
 
 Works on Windows 7. Not tested on Linux. Not working on Windows XP, because function:
 
