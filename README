@@ -1,1 +1,16 @@
-This file was created by IntelliJ IDEA 10.5.2 for binding GitHub repository
+Modified version of OSGi Clipboard Monitor for Java.
+
+Original code available at: https://github.com/pke/clipboard.monitor.
+
+Oiginal article: http://philondev.blogspot.com/2010/02/osgi-clipboard-monitor-for-java-on.html
+
+Works on Windows 7. Not tested on Linux. Not working on Windows XP, because function:
+
+  	viewer = User32.INSTANCE.CreateWindowEx(0, "STATIC", "", 0, 0, 0, 0, 0, //$NON-NLS-1$ //$NON-NLS-2$
+				null, 0, 0, null);
+
+returns null, and GetLastError() function returns error code 1411 (ERROR_CLASS_DOES_NOT_EXIST 1411 (0x583). 
+Most probably there is a need to register window class "STATIC" with RegisterClass or RegisterClassEx function 
+before call function CreateWindowEx.
+
+WindowsClipboardMonitorApp included in this project ilustrate how ClipboardMonitor can be used. 
